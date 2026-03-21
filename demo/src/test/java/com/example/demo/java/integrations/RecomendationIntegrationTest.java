@@ -19,7 +19,7 @@ import com.example.demo.domain.Recomendation;
 import jakarta.transaction.Transactional;
 
 @SpringBootTest
-@ActiveProfiles("test")
+@ActiveProfiles("demo")
 @Transactional
 public class RecomendationIntegrationTest {
 

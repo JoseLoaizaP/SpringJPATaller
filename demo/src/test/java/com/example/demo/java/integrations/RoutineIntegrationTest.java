@@ -18,7 +18,7 @@ import com.example.demo.domain.User;
 import jakarta.transaction.Transactional;
 
 @SpringBootTest
-@ActiveProfiles("test")
+@ActiveProfiles("demo")
 @Transactional
 public class RoutineIntegrationTest {
 
