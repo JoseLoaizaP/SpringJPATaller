@@ -6,7 +6,9 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.Data;
 import jakarta.persistence.Id;
-import jakarta.persistence.Column;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 
 @Data
 @AllArgsConstructor
@@ -18,9 +20,17 @@ public class Message {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String content;
-    @Column(name = "sender_user_id")
-    private Integer senderId;
-    @Column(name = "receiver_user_id")
-    private Integer receiverId;
 
+    @ManyToOne
+    @JoinColumn(name = "sender_user_id", nullable = false)
+    private User sender;
+
+    @ManyToOne
+    @JoinColumn(name = "receiver_user_id", nullable = false)
+    private User reciever;
+
+    @OneToOne
+    @JoinColumn(name = "notification")
+    private Notification notification;
+    
 }

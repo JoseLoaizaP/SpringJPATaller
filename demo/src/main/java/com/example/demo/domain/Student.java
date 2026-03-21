@@ -1,6 +1,8 @@
 package com.example.demo.domain;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.PrimaryKeyJoinColumn;
 import jakarta.persistence.Table;
 import lombok.Data;
@@ -13,5 +15,8 @@ import lombok.EqualsAndHashCode;
 @PrimaryKeyJoinColumn(name = "user_id")
 public class Student extends User {
     
+    @ManyToOne
+    @JoinColumn(name="trainer_id")
+    private Trainer trainer;
     
 }

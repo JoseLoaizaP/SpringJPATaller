@@ -1,9 +1,12 @@
 package com.example.demo.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.Data;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -26,4 +29,40 @@ public class User {
     private Double weight;
     private Double height;
     private String password;
+
+    @OneToMany(mappedBy = "user")
+    @JsonIgnore
+    private List<UserPermission> userPermissions;
+
+    @OneToMany(mappedBy = "user")
+    @JsonIgnore
+    private List<UserRecomendation> userRecomendations;
+
+    @OneToOne
+    @JoinColumn(name = "progress_id")
+    private UserProgress progress;
+
+    @OneToMany(mappedBy = "user")
+    @JsonIgnore
+    private List<Stats> stats;
+
+    @OneToMany(mappedBy = "user")
+    @JsonIgnore
+    private List<Sesion> sesions;
+
+    @OneToMany(mappedBy = "reciever")
+    @JsonIgnore
+    private List<Message> recievedMessages;
+
+    @OneToMany(mappedBy = "sender")
+    @JsonIgnore
+    private List<Message> sentMessages;
+
+    @OneToMany(mappedBy = "user")
+    @JsonIgnore
+    private List<Notification> notifications;
+
+    @OneToMany(mappedBy = "user")
+    @JsonIgnore
+    private List<UserParticipation> userParticipations;
 }

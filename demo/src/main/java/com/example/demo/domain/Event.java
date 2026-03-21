@@ -8,6 +8,10 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.Data;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -21,5 +25,12 @@ public class Event {
     private String title;
     private String place;
     private Timestamp date;
+
+    @ManyToOne
+    @JoinColumn(name = "admin_id",nullable = false)
+    private User admin;
+
+    @OneToMany(mappedBy = "userParticipation")
+    private List<UserParticipation> userParticipations;
 
 }
