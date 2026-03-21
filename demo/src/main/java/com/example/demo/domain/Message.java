@@ -1,4 +1,5 @@
 package com.example.demo.domain;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,7 +15,7 @@ import jakarta.persistence.OneToOne;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Message {
+public class Message{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
