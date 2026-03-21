@@ -22,7 +22,7 @@ import com.example.demo.domain.Event;
 import jakarta.transaction.Transactional;
 
 @SpringBootTest
-@ActiveProfiles("test")
+@ActiveProfiles("demo")
 @Transactional
 public class EventServiceIntegrationTest {
 

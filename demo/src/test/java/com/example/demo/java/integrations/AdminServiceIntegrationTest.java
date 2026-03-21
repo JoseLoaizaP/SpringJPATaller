@@ -20,7 +20,7 @@ import com.example.demo.domain.Admin;
 import jakarta.transaction.Transactional;
 
 @SpringBootTest
-@ActiveProfiles("test")
+@ActiveProfiles("demo")
 @Transactional
 public class AdminServiceIntegrationTest {
 

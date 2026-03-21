@@ -20,7 +20,7 @@ import jakarta.transaction.Transactional;
 
 
 @SpringBootTest
-@ActiveProfiles("test")
+@ActiveProfiles("demo")
 @Transactional
 public class ExerciseServiceIntegrationTest {
 
