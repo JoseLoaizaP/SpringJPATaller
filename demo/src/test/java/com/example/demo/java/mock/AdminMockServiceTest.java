@@ -28,7 +28,7 @@ import com.example.demo.domain.Admin;
 
 @ExtendWith(MockitoExtension.class)
 @ActiveProfiles("test")
-public class AdminServiceTest {
+public class AdminMockServiceTest {
 
     @Mock
     private IAdminRepository adminRepository;

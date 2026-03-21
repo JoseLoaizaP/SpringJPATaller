@@ -20,7 +20,7 @@ import com.example.demo.domain.Routine;
 import com.example.demo.domain.User;
 
 @ExtendWith(MockitoExtension.class)
-public class RoutineMockTest {
+public class RoutineMockServiceTest {
 
     @Mock
     private IRoutineRepository routineRepository;

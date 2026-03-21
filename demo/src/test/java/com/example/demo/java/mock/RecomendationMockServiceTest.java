@@ -19,7 +19,7 @@ import com.example.demo.Service.impl.RecomendationService;
 import com.example.demo.domain.Recomendation;
 
 @ExtendWith(MockitoExtension.class)
-public class RecomendationMockTest {
+public class RecomendationMockServiceTest {
 
     @Mock
     private IRecomendationRepository recomendationRepository;

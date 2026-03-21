@@ -30,7 +30,7 @@ import com.example.demo.domain.Event;
 
 @ExtendWith(MockitoExtension.class)
 @ActiveProfiles("test")
-public class EventServiceTest {
+public class EventMockServiceTest {
 
     @Mock
     private IEventRepository eventRepository;
