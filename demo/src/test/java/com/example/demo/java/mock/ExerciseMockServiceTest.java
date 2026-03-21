@@ -28,7 +28,7 @@ import com.example.demo.domain.Exercise;
 
 @ExtendWith(MockitoExtension.class)
 @ActiveProfiles("test")
-public class ExerciseServiceTest {
+public class ExerciseMockServiceTest {
 
     @Mock
     private IExerciceRepository exerciceRepository;

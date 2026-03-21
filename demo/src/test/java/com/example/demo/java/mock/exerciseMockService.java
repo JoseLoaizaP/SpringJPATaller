@@ -1,5 +1,5 @@
 package com.example.demo.java.mock;
 
-public class exercise {
+public class exerciseMockService {
 
 }

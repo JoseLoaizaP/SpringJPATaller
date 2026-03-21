@@ -20,7 +20,7 @@ import com.example.demo.domain.Sesion;
 import com.example.demo.domain.User;
 
 @ExtendWith(MockitoExtension.class)
-public class SesionMockTest {
+public class SesionMockServiceTest {
 
     @Mock
     private ISesionRepository sesionRepository;
