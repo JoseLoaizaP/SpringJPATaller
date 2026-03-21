@@ -19,14 +19,12 @@ public class UserParticipation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Integer userId;
-    private Integer eventId;
 
     @ManyToOne
-    @JoinColumn(name="event_id")
+    @JoinColumn(name = "event_id", nullable = false)
     private Event event;
 
     @ManyToOne
-    @JoinColumn(name="user_id", nullable = false)
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 }
