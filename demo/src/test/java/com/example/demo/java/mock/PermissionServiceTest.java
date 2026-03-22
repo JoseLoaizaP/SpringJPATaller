@@ -38,12 +38,10 @@ public class PermissionServiceTest {
     @BeforeEach
     public void setUp() {
 
-        //Permission sin ID
         permission = new Permission();
         permission.setId(null);
         permission.setCode(100);
 
-        //Permission guardado
         savedPermission = new Permission();
         savedPermission.setId(1);
         savedPermission.setCode(100);
